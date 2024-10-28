@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>  
+ 
+    <a href="/new">Create New Post</a>
+    <hr>
+    <% if (posts.length === 0) { %>
+        <p>No posts yet. Be the first to create one!</p>
+    <% } else { %>
+        <% posts.forEach(post => { %>
+            <div class="post">
+                <h2><a href="/post/<%= post.id %>"><%= post.title %></a></h2>
+                <% if (post.content.length > 100) {%>
+                <p><%= post.content.substring(0, 100) %>...</p>
+                <% } else { %>
+                    <p><%= post.content %></p>
+                  <% }  %>
+            </div>
+        <% }) %>
+    <% } %>
+
+<%- include("partials/footer.ejs") %>

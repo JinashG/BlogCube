@@ -1,0 +1,22 @@
+
+body {
+    font-family: Arial, sans-serif;
+   
+}
+
+h1 {
+    color: #333;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
