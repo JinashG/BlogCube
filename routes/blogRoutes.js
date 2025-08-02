@@ -1,7 +1,21 @@
 import express from "express";
 const router = express.Router();
 
-let posts = [];
+let posts = [{
+    id: 1,
+    title: "Getting Started with Express.js",
+    content: "Express.js is a minimal and flexible Node.js web application framework"
+  },
+  {
+    id: 2,
+    title: "Why EJS is Great for Server-Side Rendering",
+    content: "EJS lets you embed JavaScript into HTML with ease. It's perfect for templating"
+  },
+  {
+    id: 3,
+    title: "Roadmap to Full Stack Development",
+    content: "Start with HTML, CSS, and JavaScript. Then move to Node.js, Express, and databases"
+  }];
 
 
 router.get('/', (req, res) => {
@@ -9,12 +23,12 @@ router.get('/', (req, res) => {
 });
 
 
-router.get('/new', (req, res) => {
-    res.render('new_post');
+router.get('/newpost', (req, res) => {
+    res.render('newpost');
 });
 
 
-router.post('/new', (req, res) => {
+router.post('/newpost', (req, res) => {
     const { title, content } = req.body;
     const newPost = {
         id: posts.length + 1,

@@ -22,6 +22,6 @@
 2. Install dependencies:
    ```bash
    npm install
-**3.**Run the server:
+3.Run the server:
 node app.js
 Open your browser and go to http://localhost:3000
